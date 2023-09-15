@@ -16,8 +16,8 @@ export default function Contact() {
         <h3>Psst... Jeg kan også kontakes her:</h3>
         <div>
           <i className="fa-brands fa-linkedin"></i>
-          <i class="fa-solid fa-phone"></i>
-          <i class="fa-solid fa-envelope"></i>
+          <i className="fa-solid fa-phone"></i>
+          <i className="fa-solid fa-envelope"></i>
         </div>
       </div>
     </div>

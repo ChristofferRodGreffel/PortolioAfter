@@ -10,7 +10,7 @@ export default function WeekDish() {
       </div>
       <div className="c-desc">
         <div>
-          <h2>Om projektet</h2>
+          <h2>Kort om projektet</h2>
           <p>
             Dette projekt udsprang af manglen på kreativitet når man skal sammensætte en ugeplan for aftensmad. <br />
             <br />

@@ -10,10 +10,11 @@ export default function AnnaRod() {
       </div>
       <div className="c-desc">
         <div>
-          <h2>Om projektet</h2>
+          <h2>Kort om projektet</h2>
           <p>
             I dette projekt, som er et kunstgalleri, har jeg tilegnet mig stor viden omkring brugen af JavaScript. <br />
-            <br /> Samtidig har der været en større opgave i at designe galleriet og opsætningen deraf.
+            <br /> Jeg har eksempelvis lært at opsætte et galleri og samtidig lavet en filtreringsfuktion i galleriet. Jeg har også tilegnet med erfaring med fotografering, da alle billeder er taget
+            af mig.
           </p>
         </div>
         <div>

@@ -19,6 +19,8 @@
 
 /* Declaring general styling rules */
 body {
+  display: flex;
+  flex-direction: column;
   color: var(--white);
   background-color: var(--bg-color);
   font-family: "Outfit", sans-serif;
@@ -58,11 +60,7 @@ nav a {
 }
 
 /* SECTION STYLING (FOR EACH SECTION) */
-.app {
-  scroll-snap-type: y mandatory;
-}
 .section {
-  scroll-snap-align: start;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -266,7 +264,13 @@ video {
 
 .project-name {
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
+.project-name:hover {
+  transform: translateX(20px);
+}
+
+/* ANIMATIONS */
 
 @keyframes slide-in-blurred-top {
   0% {
@@ -289,12 +293,25 @@ video {
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .c-desc {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--dark-blue);
   height: 400px;
+}
+.c-desc > * {
+  -webkit-animation: fade-in 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .c-desc h2 {
@@ -408,4 +425,89 @@ video {
   line-height: 30px;
   font-weight: 200;
   width: 600px;
+}
+
+/* CONTACT STYLING */
+
+#contact-component {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-component::before {
+  content: "";
+  background-image: url("assets/bgcode.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.03;
+}
+
+#contact-form {
+  background: rgba(255, 255, 255, 0.075);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(1.9px);
+  border-radius: 10px;
+  width: 450px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form p {
+  text-align: center;
+  font-size: 18pt;
+  font-weight: 200;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+  font-weight: 100;
+  font-size: 13pt;
+  color: rgba(255, 255, 255, 0.527);
+}
+#contact-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 13pt;
+}
+
+#contact-form textarea {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 13pt;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  overflow: auto;
+}
+#contact-form ::placeholder {
+  filter: opacity(0.4);
+  font-style: italic;
+}
+
+#form-submit {
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 17pt !important;
+  font-weight: 500;
+  border: none;
+  font-family: inherit;
+  background-color: var(--dark-blue);
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+#form-submit:hover {
+  background-color: var(--logo-blue);
 }

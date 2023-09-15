@@ -469,12 +469,13 @@ video {
   bottom: 0px;
   left: 0px;
   opacity: 0.03;
+  z-index: -1;
 }
 
 #contact-form {
-  background: rgba(255, 255, 255, 0.075);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(1.9px);
+  background: rgba(255, 255, 255, 0.11);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   border-radius: 10px;
   width: 450px;
   padding: 25px;
@@ -495,9 +496,12 @@ video {
   margin-bottom: 5px;
   font-weight: 100;
   font-size: 13pt;
-  color: rgba(255, 255, 255, 0.527);
+  color: rgba(255, 255, 255, 0.644);
 }
 #contact-form input {
+  background: rgba(255, 255, 255, 0.253);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(0.5px);
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -507,6 +511,9 @@ video {
 }
 
 #contact-form textarea {
+  background: rgba(255, 255, 255, 0.253);
+  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
   padding: 10px;
   font-family: inherit;
   font-size: 13pt;
@@ -528,12 +535,12 @@ video {
   font-weight: 500;
   border: none;
   font-family: inherit;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-blue) !important;
   color: white;
   transition: 0.2s ease-in-out;
 }
 #form-submit:hover {
-  background-color: var(--logo-blue);
+  background-color: var(--logo-blue) !important;
 }
 
 #contact-other {
@@ -545,14 +552,31 @@ video {
   font-size: 20pt;
   font-weight: 200;
 }
-#contact-other div {
+
+#contact-item-container {
   display: flex;
-  justify-content: space-evenly;
-}
-#contact-other div i {
-  font-size: 30pt;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.fa-phone:hover:after {
-  content: "29 80 55 16";
+.contact-item {
+  padding: 10px 0px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+}
+.contact-item:hover {
+  transform: translateX(10px);
+}
+.contact-item p {
+  font-size: 15pt;
+  font-weight: 200;
+}
+.contact-item i {
+  font-size: 20pt;
 }

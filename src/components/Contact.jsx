@@ -12,6 +12,14 @@ export default function Contact() {
         <textarea name="message"></textarea>
         <input type="submit" value="Send Besked" id="form-submit" />
       </form>
+      <div id="contact-other">
+        <h3>Psst... Jeg kan også kontakes her:</h3>
+        <div>
+          <i className="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-phone"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+      </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function Projects() {
       contentToDisplay = <WeekDish />;
       break;
     default:
-      contentToDisplay = <p>Select a project to view its details.</p>;
+      contentToDisplay = <h1>This project is coming soon. Hang in tight!</h1>;
   }
 
   const handleProjectClick = (projectId) => {

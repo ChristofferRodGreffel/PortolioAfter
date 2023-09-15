@@ -1,3 +1,5 @@
+import AnnaRod from "./projects/AnnaRod";
+
 export default function Projects() {
   return (
     <div className="section" id="content">
@@ -34,8 +36,7 @@ export default function Projects() {
         </div>
       </div>
       <div id="c-right">
-        <div id="c-window"></div>
-        <div id="c-desc"></div>
+        <AnnaRod />
       </div>
     </div>
   );

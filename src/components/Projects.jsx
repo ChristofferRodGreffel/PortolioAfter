@@ -1,4 +1,5 @@
 import AnnaRod from "./projects/AnnaRod";
+import WeekDish from "./projects/WeekDish";
 
 export default function Projects() {
   return (
@@ -36,7 +37,7 @@ export default function Projects() {
         </div>
       </div>
       <div id="c-right">
-        <AnnaRod />
+        <WeekDish />
       </div>
     </div>
   );

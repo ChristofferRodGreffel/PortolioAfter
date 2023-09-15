@@ -23,8 +23,12 @@ export default function AnnaRod() {
             <i className="fa-brands fa-square-js"></i>
           </div>
           <div className="c-live">
-            <button>Live Site</button>
-            <i className="fa-brands fa-github"></i>
+            <a href="https://annarod.dk/index.html" target="_blank">
+              Live Site
+            </a>
+            <a href="https://github.com/ChristofferRodGreffel/AnnaRod.git" target="_blank">
+              <i className="fa-brands fa-github"></i>
+            </a>
           </div>
         </div>
       </div>

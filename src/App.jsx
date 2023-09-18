@@ -10,8 +10,8 @@ export default function App() {
       <Header />
       <Frontpage />
       <Projects />
-      {/* <About />
-      <Contact /> */}
+      <About />
+      {/* <Contact /> */}
     </div>
   );
 }

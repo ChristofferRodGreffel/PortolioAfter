@@ -1,10 +1,12 @@
 import weekdishlogo from "../../assets/projects/weekdishlogo.svg";
 import weekdishpresent from "../../assets/projects/weekdishpresent.png";
+import ReturnButton from "../ReturnButton";
 
 export default function WeekDish() {
   return (
     <>
       <div className="c-window" style={{ backgroundColor: "#E3E6D1" }}>
+        <ReturnButton />
         <img src={weekdishlogo} alt="project logo" className="project-logo" />
         <img src={weekdishpresent} alt="project presentation" className="project-present" />
       </div>

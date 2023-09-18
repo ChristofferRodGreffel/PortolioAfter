@@ -20,6 +20,15 @@ export default function Projects() {
 
   const handleProjectClick = (projectId) => {
     setSelectedProject(projectId);
+
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth < 930) {
+      const menu = document.querySelector("#c-left");
+      const project = document.querySelector("#c-right");
+      menu.style.transform = "translateX(-150%)";
+      project.style.transform = "translateX(0%)";
+    }
   };
 
   return (

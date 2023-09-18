@@ -1,10 +1,12 @@
 import signature from "../../assets/projects/signature.svg";
 import annarodpresent from "../../assets/projects/annarodpresent.png";
+import ReturnButton from "../ReturnButton";
 
 export default function AnnaRod() {
   return (
     <>
       <div className="c-window" style={{ backgroundColor: "#F2F1E5" }}>
+        <ReturnButton />
         <img src={signature} alt="project logo" className="project-logo" />
         <img src={annarodpresent} alt="project presentation" className="project-present" />
       </div>

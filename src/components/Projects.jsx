@@ -2,8 +2,16 @@ import { useState } from "react";
 import AnnaRod from "./projects/AnnaRod";
 import WeekDish from "./projects/WeekDish";
 
+function checkMobile() {
+  if (window.innerWidth > 930) {
+    return "project1";
+  } else {
+    return "";
+  }
+}
+
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState("project1");
+  const [selectedProject, setSelectedProject] = useState(checkMobile());
 
   let contentToDisplay = null;
 

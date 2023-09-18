@@ -1,10 +1,12 @@
 import wave from "../assets/wave.svg";
 import portrait from "../assets/portrait.jpg";
 import fpvideo from "../assets/fpvideo.mp4";
+import HandUp from "./HandUp";
 
 export default function Frontpage() {
   return (
     <>
+      <HandUp />
       <div className="section" id="frontpage">
         <div id="video-container">
           <video src={fpvideo} autoPlay muted loop></video>

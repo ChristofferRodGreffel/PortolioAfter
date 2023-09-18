@@ -11,7 +11,7 @@ export default function App() {
       <Frontpage />
       <Projects />
       <About />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }

@@ -20,7 +20,6 @@ export default function Contact() {
   return (
     <div className="section" id="contact-component">
       <form id="contact-form" ref={form} onSubmit={sendEmail}>
-        <p>Lyst til at arbejde sammen med mig? Skriv til mig før din nabo gør det!</p>
         <input type="hidden" name="contact_number" required />
         <label>Navn</label>
         <input type="text" name="user_name" required />

@@ -3,13 +3,11 @@ import logo from "../assets/logo.svg";
 export default function Header() {
   return (
     <header>
-      <a href="#">
-        <img src={logo} alt="logo" />
-      </a>
+      <img src={logo} alt="logo" />
       <nav>
-        <a href="#">Projekter</a>
-        <a href="#">Om mig</a>
-        <a href="#" id="contact">
+        <a href="#content">Projekter</a>
+        <a href="#about">Om mig</a>
+        <a href="#contact-component" id="contact">
           Kontakt
         </a>
       </nav>

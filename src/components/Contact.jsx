@@ -1,7 +1,25 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("contact_service", "contact_form", form.current, "4715MOxle-wL5kQlH").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+
   return (
     <div className="section" id="contact-component">
-      <form id="contact-form">
+      <form id="contact-form" ref={form} onSubmit={sendEmail}>
         <p>Lyst til at arbejde sammen med mig? Skriv til mig før din nabo gør det!</p>
         <input type="hidden" name="contact_number" required />
         <label>Navn</label>

@@ -26,28 +26,28 @@ export default function Projects() {
     <div className="section" id="content">
       <div id="c-left">
         <div id="c-left-container">
-          <div onClick={() => handleProjectClick("project1")} className="project-name" tabIndex={0}>
+          <div onClick={() => handleProjectClick("project1")} className="project-name">
             <h2>Kunstgalleri</h2>
             <div className="c-left-below">
               <div className="color-rect one"></div>
               <p>Hjemmeside til kunster Anna Rod</p>
             </div>
           </div>
-          <div onClick={() => handleProjectClick("project2")} className="project-name" tabIndex={0}>
+          <div onClick={() => handleProjectClick("project2")} className="project-name">
             <h2>WeekDish</h2>
             <div className="c-left-below">
               <div className="color-rect two"></div>
               <p>Nem planlægning af mad</p>
             </div>
           </div>
-          <div onClick={() => handleProjectClick("project3")} className="project-name" tabIndex={0}>
-            <h2>WeatherApp</h2>
+          <div onClick={() => handleProjectClick("project3")} className="project-name">
+            <h2>Rideklubben</h2>
             <div className="c-left-below">
               <div className="color-rect three"></div>
-              <p>Vejret i din by</p>
+              <p>Sportsrideklubben Silkeborg</p>
             </div>
           </div>
-          <div onClick={() => handleProjectClick("project4")} className="project-name" tabIndex={0}>
+          <div onClick={() => handleProjectClick("project4")} className="project-name">
             <h2>Tuborg Squash</h2>
             <div className="c-left-below">
               <div className="color-rect four"></div>

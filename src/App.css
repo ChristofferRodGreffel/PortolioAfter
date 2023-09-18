@@ -1,6 +1,10 @@
 /* Importing fonts */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Prata&display=swap");
 
+html {
+  height: 100vh;
+}
+
 /* Removing margin and padding from all elements */
 *,
 *::before,
@@ -80,14 +84,14 @@ nav a {
 #frontpage::before {
   content: "";
   background-image: url("assets/bgcode.png");
-  background-size: 100%;
+  background-size: cover;
   position: absolute;
   object-fit: cover;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.05;
+  opacity: 0.03;
   z-index: -2;
 }
 
@@ -410,9 +414,9 @@ video {
   background-size: cover;
 }
 #a-left p {
-  font-family: "Prata", serif;
-  font-size: 28pt;
+  font-size: 25pt;
   font-weight: 100;
+  font-style: italic;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -499,9 +503,6 @@ video {
   color: rgba(255, 255, 255, 0.644);
 }
 #contact-form input {
-  background: rgba(255, 255, 255, 0.253);
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(0.5px);
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -511,9 +512,6 @@ video {
 }
 
 #contact-form textarea {
-  background: rgba(255, 255, 255, 0.253);
-  -webkit-backdrop-filter: blur(0.5px);
-  backdrop-filter: blur(0.5px);
   padding: 10px;
   font-family: inherit;
   font-size: 13pt;
@@ -579,4 +577,136 @@ video {
 }
 .contact-item i {
   font-size: 20pt;
+}
+
+/* RESPONSIVE STYLING */
+
+/* Smaller desktop screens */
+@media screen and (max-width: 1400px) {
+  /* HEADER */
+  header img {
+    width: 180px;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 85px;
+  }
+  nav a {
+    color: var(--white);
+    padding: 10px;
+    font-size: 12pt;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  #contact {
+    background-color: var(--logo-blue);
+    padding: 8px 25px;
+    border-radius: 30px;
+  }
+
+  /* FRONT PAGE */
+  #portrait {
+    width: 380px;
+  }
+
+  #frontpage {
+    gap: 50px;
+  }
+
+  #fp-content h1 {
+    font-size: 70pt;
+  }
+  #fp-content p {
+    width: 400px;
+    font-size: 14pt;
+    font-weight: 200;
+    line-height: 30px;
+  }
+  #fp-content div img {
+    width: 80px;
+  }
+
+  #logos {
+    margin-top: 30px;
+    display: flex;
+    gap: 70px;
+    font-size: 30pt;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 930px) {
+  .section {
+    min-height: 100dvh;
+  }
+
+  /* HEADER */
+  header {
+    padding: 30px 20px;
+  }
+  header img {
+    width: 150px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  /* FRONTPAGE */
+  #frontpage {
+    flex-direction: column;
+    gap: 0;
+  }
+  #fp-content {
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+    text-align: center;
+  }
+  #fp-content div {
+    text-align: center;
+  }
+  #fp-content div img {
+    width: 60px;
+    top: 5px;
+  }
+  #fp-content h1 {
+    font-size: 50pt;
+  }
+  #fp-content p {
+    font-size: 12pt;
+    width: 90%;
+    line-height: 25px;
+  }
+  #portrait {
+    width: 300px;
+  }
+  #logos {
+    font-size: 25pt;
+    gap: 40px;
+  }
+  #video-container {
+    clip-path: polygon(0 0, 30% 0, 160% 100%, 0% 100%);
+  }
+
+  /* PROJECTS PAGE */
+  #c-left {
+    width: 100%;
+  }
+  #c-left-container {
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+  }
+  #c-left-container h2 {
+    font-size: 30pt;
+  }
+  #c-left-container p {
+    font-size: 10pt;
+  }
+  #c-right {
+    display: none;
+  }
 }

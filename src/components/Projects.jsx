@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AnnaRod from "./projects/AnnaRod";
 import WeekDish from "./projects/WeekDish";
+import Sps from "./projects/Sps";
+import Weather from "./projects/Weather";
 
 function checkMobile() {
   if (window.innerWidth > 930) {
@@ -21,6 +23,12 @@ export default function Projects() {
       break;
     case "project2":
       contentToDisplay = <WeekDish />;
+      break;
+    case "project3":
+      contentToDisplay = <Sps />;
+      break;
+    case "project4":
+      contentToDisplay = <Weather />;
       break;
     default:
       contentToDisplay = <h1>This project is coming soon. Hang in tight!</h1>;
@@ -65,7 +73,7 @@ export default function Projects() {
             </div>
           </div>
           <div onClick={() => handleProjectClick("project4")} className="project-name">
-            <h2>Tuborg Squash</h2>
+            <h2>WeahterApp</h2>
             <div className="c-left-below">
               <div className="color-rect four"></div>
               <p>Oplevelseshjemmeside</p>

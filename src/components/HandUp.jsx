@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function HandUp() {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(100);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +23,9 @@ export default function HandUp() {
   }, []);
 
   return (
-    <a href="#frontpage">
-      <i className="fa-solid fa-hand-point-up" id="toTop" style={{ transform: `translateX(${scrollPosition}px)` }}></i>
+    <a href="#frontpage" id="toTop" style={{ transform: `translateX(${scrollPosition}px)` }}>
+      <i className="fa-solid fa-hand-point-up"></i>
+      <p>Hjem</p>
     </a>
   );
 }

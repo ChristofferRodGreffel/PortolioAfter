@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import spinner from "../assets/spinner.gif";
 
 export default function Contact() {
   const form = useRef();
@@ -7,12 +8,24 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const spinner = document.getElementById("spinner");
+    spinner.style.display = "flex";
+
+    const successMessage = document.getElementById("success");
+
     emailjs.sendForm("contact_service", "contact_form", form.current, "4715MOxle-wL5kQlH").then(
       (result) => {
         console.log(result.text);
+        form.current.reset();
+        spinner.style.display = "none";
+        successMessage.style.display = "flex";
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, "3000");
       },
       (error) => {
         console.log(error.text);
+        spinner.style.display = "none";
       }
     );
   };
@@ -28,6 +41,10 @@ export default function Contact() {
         <label>Besked</label>
         <textarea name="message"></textarea>
         <input type="submit" value="Send Besked" id="form-submit" />
+        <img src={spinner} alt="spinner" id="spinner" placeholder="Sender besked" />
+        <p id="success">
+          Din besked er sendt <i className="fa-solid fa-check"></i>
+        </p>
       </form>
       <div id="contact-other">
         <h3>Psst... Jeg kan også kontakes her:</h3>

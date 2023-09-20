@@ -16,7 +16,7 @@ export default function Frontpage() {
             <h1>Dav</h1>
             <img src={wave} alt="vinkende hånd" />
           </div>
-          <p>Mit navn er Christoffer. Jeg brænder for at designe og kode moderne og visuelt æstetiske løsninger. Jeg håber, at jeg må kode for dig.</p>
+          <p>Mit navn er Christoffer. Jeg brænder for at designe og udvikle moderne løsninger der forener æstetik og funktionalitet. Jeg håber at vi kan skabe noget sammen.</p>
           <div id="logos">
             <i className="fa-brands fa-html5"></i>
             <i className="fa-brands fa-css3-alt"></i>

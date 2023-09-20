@@ -16,14 +16,14 @@ export default function AnnaRod() {
           <p>
             I dette projekt, som er et kunstgalleri, har jeg tilegnet mig stor viden omkring brugen af JavaScript. <br />
             <br /> Jeg har eksempelvis lært at opsætte et galleri og samtidig lavet en filtreringsfuktion i galleriet. Jeg har også tilegnet med erfaring med fotografering, da alle billeder er taget
-            af mig.
+            og redigeret af mig.
           </p>
         </div>
         <div>
           <div className="c-logos">
-            <i className="fa-brands fa-html5"></i>
-            <i className="fa-brands fa-css3-alt"></i>
-            <i className="fa-brands fa-square-js"></i>
+            <i className="fa-brands fa-html5" content="HTML"></i>
+            <i className="fa-brands fa-css3-alt" content="CSS"></i>
+            <i className="fa-brands fa-square-js" content="JS"></i>
           </div>
           <div className="c-live">
             <a href="https://annarod.dk/index.html" target="_blank">

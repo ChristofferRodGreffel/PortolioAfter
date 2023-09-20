@@ -1,5 +1,6 @@
 import spslogo from "../../assets/projects/spslogo.svg";
 import spspresent from "../../assets/projects/spspresent.png";
+import splidejs from "../../assets/splidejs.png";
 import ReturnButton from "../ReturnButton";
 
 export default function Sps() {
@@ -14,19 +15,23 @@ export default function Sps() {
         <div>
           <h2>Kort om projektet</h2>
           <p>
-            Dette projekt udsprang af manglen på kreativitet når man skal sammensætte en ugeplan for aftensmad. <br />
+            Dette eksamensprojekt på 2. semester er en komplet rebranding af Sportsrideklubben Silkeborg. <br />
             <br />
-            Det er en SPA, som er lavet til at udfordre mine JavaScript evner. Retter og ingredienser er genereret af ChatGPT.
+            Der er brugt meget tid på at designe en ny visuel identitet og samtidig er der brugt{" "}
+            <a href="https://splidejs.com/" target="_blank" style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}>
+              SplideJS
+            </a>{" "}
+            til at opsætte eventkortene på forsiden.
           </p>
         </div>
         <div>
           <div className="c-logos">
-            <i className="fa-brands fa-html5"></i>
-            <i className="fa-brands fa-css3-alt"></i>
-            <i className="fa-brands fa-square-js"></i>
+            <i className="fa-brands fa-html5" content="HTML"></i>
+            <i className="fa-brands fa-css3-alt" content="CSS"></i>
+            <i className="fa-brands fa-square-js" content="JS"></i>
           </div>
           <div className="c-live">
-            <a href="https://chrisrg.dk/weekdish/" target="_blank">
+            <a href="https://chrisrg.dk/sps/" target="_blank">
               Live Site
             </a>
             <a href="#" target="_blank">

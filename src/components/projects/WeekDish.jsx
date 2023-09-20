@@ -14,16 +14,17 @@ export default function WeekDish() {
         <div>
           <h2>Kort om projektet</h2>
           <p>
-            Dette projekt udsprang af manglen på kreativitet når man skal sammensætte en ugeplan for aftensmad. <br />
+            Dette projekt udsprang af manglen på kreativitet når man skal sammensætte en madplan på ugebasis.
             <br />
-            Det er en SPA, som er lavet til at udfordre mine JavaScript evner. Retter og ingredienser er genereret af ChatGPT.
+            <br />
+            Projektet har været med til at udfordre min JavaScript viden og har givet mig stor viden indenfor en række JavaScript grundsten som: arrays, objects, functions, og meget mere.
           </p>
         </div>
         <div>
           <div className="c-logos">
-            <i className="fa-brands fa-html5"></i>
-            <i className="fa-brands fa-css3-alt"></i>
-            <i className="fa-brands fa-square-js"></i>
+            <i className="fa-brands fa-html5" content="HTML"></i>
+            <i className="fa-brands fa-css3-alt" content="CSS"></i>
+            <i className="fa-brands fa-square-js" content="JS"></i>
           </div>
           <div className="c-live">
             <a href="https://chrisrg.dk/weekdish/" target="_blank">

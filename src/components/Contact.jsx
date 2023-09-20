@@ -41,7 +41,7 @@ export default function Contact() {
         <label>Besked</label>
         <textarea name="message"></textarea>
         <input type="submit" value="Send Besked" id="form-submit" />
-        <img src={spinner} alt="spinner" id="spinner" placeholder="Sender besked" />
+        <img src={spinner} alt="spinner" id="spinner" />
         <p id="success">
           Din besked er sendt <i className="fa-solid fa-check"></i>
         </p>

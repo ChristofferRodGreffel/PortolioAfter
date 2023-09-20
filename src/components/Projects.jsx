@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AnnaRod from "./projects/AnnaRod";
 import WeekDish from "./projects/WeekDish";
 import Sps from "./projects/Sps";
@@ -38,14 +38,29 @@ export default function Projects() {
     setSelectedProject(projectId);
 
     const viewportWidth = window.innerWidth;
+    const menu = document.querySelector("#c-left");
+    const project = document.querySelector("#c-right");
+    const content = document.querySelector("#content");
 
     if (viewportWidth < 930) {
-      const menu = document.querySelector("#c-left");
-      const project = document.querySelector("#c-right");
-      menu.style.transform = "translateX(-150%)";
-      project.style.transform = "translateX(0%)";
+      menu.style.transform = "translateX(-100%)";
+      project.style.transform = "translateX(0)";
+      content.style.overflow = "visible";
     }
   };
+
+  useEffect(() => {
+    const menuHeight = document.querySelector("#c-left").clientHeight;
+    const projectHeight = document.querySelector("#c-right").clientHeight;
+    const content = document.querySelector("#content");
+
+    console.log("checking");
+
+    if (projectHeight > menuHeight) {
+      const correctMargin = projectHeight - menuHeight + 50;
+      content.style.marginBottom = `${correctMargin}px`;
+    }
+  });
 
   return (
     <div className="section" id="content">

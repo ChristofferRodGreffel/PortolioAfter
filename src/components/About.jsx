@@ -10,10 +10,10 @@ export default function About() {
       </div>
       <div id="a-right">
         <div id="a-right-container">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
             <h1>Grafisk gøgler & kodeguru</h1>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
             <AboutText />
           </ScrollAnimation>
           {/* <p>

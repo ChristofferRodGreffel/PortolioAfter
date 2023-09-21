@@ -2,6 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import spinner from "../assets/spinner.gif";
 import coffee from "../assets/coffee.png";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Contact() {
   const form = useRef();
@@ -53,20 +54,28 @@ export default function Contact() {
         </form>
       </div>
       <div id="contact-other">
-        <h3>Psst... Jeg kan også kontakes her:</h3>
+        <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
+          <h3>Psst... Jeg kan også kontakes her:</h3>
+        </ScrollAnimation>
         <div id="contact-item-container">
-          <a href="https://www.linkedin.com/in/christoffer-rod-greffel" target="_blank" rel="noopener noreferrer" className="contact-item">
-            <i className="fa-brands fa-linkedin"></i>
-            <p>Christoffer-Rod-Greffel</p>
-          </a>
-          <a href="tel:+4529805516" rel="noopener noreferrer" className="contact-item">
-            <i className="fa-solid fa-phone"></i>
-            <p>29 80 55 16</p>
-          </a>
-          <a href="mailto:chrisrgweb@outlook.com" target="_blank" rel="noopener noreferrer" className="contact-item">
-            <i className="fa-solid fa-envelope"></i>
-            <p>chrisrgweb@outlook.com</p>
-          </a>
+          <ScrollAnimation animateIn="fadeInDown" animateOnce={true} offset={100}>
+            <a href="https://www.linkedin.com/in/christoffer-rod-greffel" target="_blank" rel="noopener noreferrer" className="contact-item">
+              <i className="fa-brands fa-linkedin"></i>
+              <p>Christoffer-Rod-Greffel</p>
+            </a>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInDown" animateOnce={true} offset={100}>
+            <a href="tel:+4529805516" rel="noopener noreferrer" className="contact-item">
+              <i className="fa-solid fa-phone"></i>
+              <p>29 80 55 16</p>
+            </a>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInDown" animateOnce={true} offset={100}>
+            <a href="mailto:chrisrgweb@outlook.com" target="_blank" rel="noopener noreferrer" className="contact-item">
+              <i className="fa-solid fa-envelope"></i>
+              <p>chrisrgweb@outlook.com</p>
+            </a>
+          </ScrollAnimation>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function Frontpage() {
       <HandUp />
       <div className="section" id="frontpage">
         <div id="video-container">
-          <video src={fpvideo} autoPlay muted loop></video>
+          <video src={fpvideo} autoPlay muted loop playsInline></video>
         </div>
         <div id="fp-content">
           <div>

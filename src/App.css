@@ -288,7 +288,7 @@ video {
   height: 12px;
   margin-right: 10px;
 }
-.color-rect.one {
+.color-rect:nth-child(1) {
   background-color: #f2f1e5;
 }
 .color-rect.two {
@@ -298,7 +298,7 @@ video {
   background-color: #7a6b3f;
 }
 .color-rect.four {
-  background-color: #75c3c9;
+  background-color: #74daff;
 }
 
 #c-right {
@@ -544,6 +544,7 @@ video {
 
 /* ABOUT SECTION STYLING */
 #about {
+  transition: 0.2s ease-in-out;
   display: flex;
 }
 #a-left {

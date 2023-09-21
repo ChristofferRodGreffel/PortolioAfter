@@ -3,8 +3,7 @@ import AnnaRod from "./projects/AnnaRod";
 import WeekDish from "./projects/WeekDish";
 import Sps from "./projects/Sps";
 import Weather from "./projects/Weather";
-import "animate.css/animate.min.css";
-import ScrollAnimation from "react-animate-on-scroll";
+import ProjectLink from "./ProjectLink";
 
 const checkMobile = () => {
   if (window.innerWidth > 930) {
@@ -68,46 +67,40 @@ export default function Projects() {
     setMargin();
   });
 
+  const projects = [
+    {
+      title: "Kunstgalleri",
+      description: "Hjemmeside til kunster Anna Rod",
+      projectId: "project1",
+      rectClass: "color-rect one",
+    },
+    {
+      title: "WeekDish",
+      description: "Nem planlægning af mad",
+      projectId: "project2",
+      rectClass: "color-rect two",
+    },
+    {
+      title: "Rideklubben",
+      description: "Sportsrideklubben Silkeborg",
+      projectId: "project3",
+      rectClass: "color-rect three",
+    },
+    {
+      title: "WeatherNOW",
+      description: "Få hurtig oversigt over vejret",
+      projectId: "project4",
+      rectClass: "color-rect four",
+    },
+  ];
+
   return (
     <div className="section" id="content">
       <div id="c-left">
         <div id="c-left-container">
-          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-            <div onClick={() => handleProjectClick("project1")} className="project-name">
-              <h2>Kunstgalleri</h2>
-              <div className="c-left-below">
-                <div className="color-rect one"></div>
-                <p>Hjemmeside til kunster Anna Rod</p>
-              </div>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-            <div onClick={() => handleProjectClick("project2")} className="project-name">
-              <h2>WeekDish</h2>
-              <div className="c-left-below">
-                <div className="color-rect two"></div>
-                <p>Nem planlægning af mad</p>
-              </div>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-            <div onClick={() => handleProjectClick("project3")} className="project-name">
-              <h2>Rideklubben</h2>
-              <div className="c-left-below">
-                <div className="color-rect three"></div>
-                <p>Sportsrideklubben Silkeborg</p>
-              </div>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-            <div onClick={() => handleProjectClick("project4")} className="project-name">
-              <h2>WeahterApp</h2>
-              <div className="c-left-below">
-                <div className="color-rect four"></div>
-                <p>Oplevelseshjemmeside</p>
-              </div>
-            </div>
-          </ScrollAnimation>
+          {projects.map((project, key) => {
+            return <ProjectLink key={key} title={project.title} description={project.description} projectId={project.projectId} color={project.rectClass} handleProjectClick={handleProjectClick} />;
+          })}
         </div>
       </div>
       <div id="c-right">{contentToDisplay}</div>

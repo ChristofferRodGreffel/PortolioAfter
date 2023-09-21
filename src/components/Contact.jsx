@@ -35,7 +35,7 @@ export default function Contact() {
     <div className="section" id="contact-component">
       <div id="form-container">
         <h1>
-          Skriv til mig <img src={coffee} alt="kaffekop" />
+          Skal vi tage en kop? <img src={coffee} alt="kaffekop" />
         </h1>
         <form id="contact-form" ref={form} onSubmit={sendEmail}>
           <input type="hidden" name="contact_number" required />

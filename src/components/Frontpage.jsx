@@ -1,4 +1,3 @@
-import wave from "../assets/wave.svg";
 import wave2 from "../assets/wave.png";
 import portrait from "../assets/portrait.jpg";
 import fpvideo from "../assets/fpvideo.mp4";

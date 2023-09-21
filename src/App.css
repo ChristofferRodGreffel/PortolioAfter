@@ -190,7 +190,7 @@ video {
 
 #portrait {
   width: 500px;
-  height: max-content;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -552,6 +552,7 @@ video {
   background-image: linear-gradient(180deg, rgba(84, 40, 140, 0) 10%, rgba(4, 40, 83, 0.8) 95%), url("./assets/about.jpg");
   filter: saturate(0.7);
   background-size: cover;
+  background-position-y: center;
 }
 #a-left p {
   font-size: 25pt;
@@ -561,7 +562,7 @@ video {
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 70%;
   text-align: center;
   margin-bottom: 10px;
   user-select: none;
@@ -1147,7 +1148,6 @@ video {
     position: relative;
     width: 100%;
     height: 500px;
-    background-image: linear-gradient(180deg, rgba(84, 40, 140, 0) 10%, rgba(4, 40, 83, 0.8) 95%), url("assets/about.jpg");
     filter: saturate(0.7);
     background-size: cover;
     margin-top: 50px;

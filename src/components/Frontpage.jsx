@@ -26,6 +26,10 @@ export default function Frontpage() {
         </div>
         <img src={portrait} id="portrait" alt="billede af Christoffer" />
       </div>
+      <div id="scrollDown">
+        <p>Scroll videre</p>
+        <i className="fa-solid fa-angles-down"></i>
+      </div>
     </>
   );
 }

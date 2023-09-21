@@ -163,6 +163,7 @@ video {
 
 /* Left side content */
 #fp-content {
+  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s both;
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -189,6 +190,7 @@ video {
 }
 
 #portrait {
+  animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s both;
   width: 500px;
   height: auto;
   border-radius: 50%;
@@ -225,6 +227,20 @@ video {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+#scrollDown {
+  width: max-content;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-weight: 100;
 }
 
 /* CONTENT SECTION STYLING */
@@ -972,6 +988,11 @@ video {
 
   /* To Top */
   #toTop {
+    display: none;
+  }
+
+  /* Scroll down */
+  #scrollDown {
     display: none;
   }
 

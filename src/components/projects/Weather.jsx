@@ -36,7 +36,7 @@ export default function WeekDish() {
             <a href="https://chrisrg.dk/weather/" target="_blank">
               Live Site
             </a>
-            <a href="#" target="_blank">
+            <a href="https://github.com/ChristofferRodGreffel/WeatherNOW.git" target="_blank">
               <i className="fa-brands fa-github"></i>
             </a>
           </div>

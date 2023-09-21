@@ -87,7 +87,7 @@ export default function Projects() {
       rectClass: "color-rect three",
     },
     {
-      title: "WeatherNOW",
+      title: "WeatherApp",
       description: "Få hurtig oversigt over vejret",
       projectId: "project4",
       rectClass: "color-rect four",

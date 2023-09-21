@@ -30,7 +30,7 @@ export default function WeekDish() {
             <a href="https://chrisrg.dk/weekdish/" target="_blank">
               Live Site
             </a>
-            <a href="#" target="_blank">
+            <a href="https://github.com/ChristofferRodGreffel/WeekDish.git" target="_blank">
               <i className="fa-brands fa-github"></i>
             </a>
           </div>

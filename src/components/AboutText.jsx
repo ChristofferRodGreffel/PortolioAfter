@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import parse from "html-react-parser";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function AboutText() {
   const [posts, setPosts] = useState([]);
@@ -15,8 +16,12 @@ export default function AboutText() {
 
   return (
     <>
-      {posts.map((post) => {
-        return <p>{parse(post.content.rendered)}</p>;
+      {posts.map((post, key) => {
+        return (
+          <div id="aboutText" key={key}>
+            {parse(post.content.rendered)}
+          </div>
+        );
       })}
     </>
   );

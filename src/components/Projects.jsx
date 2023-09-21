@@ -3,14 +3,27 @@ import AnnaRod from "./projects/AnnaRod";
 import WeekDish from "./projects/WeekDish";
 import Sps from "./projects/Sps";
 import Weather from "./projects/Weather";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
-function checkMobile() {
+const checkMobile = () => {
   if (window.innerWidth > 930) {
     return "project1";
   } else {
     return "";
   }
-}
+};
+
+const setMargin = () => {
+  const menuHeight = document.querySelector("#c-left").clientHeight;
+  const projectHeight = document.querySelector("#c-right").clientHeight;
+  const content = document.querySelector("#content");
+
+  if (projectHeight > menuHeight) {
+    const correctMargin = projectHeight - menuHeight + 50;
+    content.style.marginBottom = `${correctMargin}px`;
+  }
+};
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(checkMobile());
@@ -47,53 +60,54 @@ export default function Projects() {
       project.style.transform = "translateX(0)";
       content.style.overflow = "visible";
     }
+
+    setMargin();
   };
 
   useEffect(() => {
-    const menuHeight = document.querySelector("#c-left").clientHeight;
-    const projectHeight = document.querySelector("#c-right").clientHeight;
-    const content = document.querySelector("#content");
-
-    console.log("checking");
-
-    if (projectHeight > menuHeight) {
-      const correctMargin = projectHeight - menuHeight + 50;
-      content.style.marginBottom = `${correctMargin}px`;
-    }
+    setMargin();
   });
 
   return (
     <div className="section" id="content">
       <div id="c-left">
         <div id="c-left-container">
-          <div onClick={() => handleProjectClick("project1")} className="project-name">
-            <h2>Kunstgalleri</h2>
-            <div className="c-left-below">
-              <div className="color-rect one"></div>
-              <p>Hjemmeside til kunster Anna Rod</p>
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <div onClick={() => handleProjectClick("project1")} className="project-name">
+              <h2>Kunstgalleri</h2>
+              <div className="c-left-below">
+                <div className="color-rect one"></div>
+                <p>Hjemmeside til kunster Anna Rod</p>
+              </div>
             </div>
-          </div>
-          <div onClick={() => handleProjectClick("project2")} className="project-name">
-            <h2>WeekDish</h2>
-            <div className="c-left-below">
-              <div className="color-rect two"></div>
-              <p>Nem planlægning af mad</p>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <div onClick={() => handleProjectClick("project2")} className="project-name">
+              <h2>WeekDish</h2>
+              <div className="c-left-below">
+                <div className="color-rect two"></div>
+                <p>Nem planlægning af mad</p>
+              </div>
             </div>
-          </div>
-          <div onClick={() => handleProjectClick("project3")} className="project-name">
-            <h2>Rideklubben</h2>
-            <div className="c-left-below">
-              <div className="color-rect three"></div>
-              <p>Sportsrideklubben Silkeborg</p>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <div onClick={() => handleProjectClick("project3")} className="project-name">
+              <h2>Rideklubben</h2>
+              <div className="c-left-below">
+                <div className="color-rect three"></div>
+                <p>Sportsrideklubben Silkeborg</p>
+              </div>
             </div>
-          </div>
-          <div onClick={() => handleProjectClick("project4")} className="project-name">
-            <h2>WeahterApp</h2>
-            <div className="c-left-below">
-              <div className="color-rect four"></div>
-              <p>Oplevelseshjemmeside</p>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <div onClick={() => handleProjectClick("project4")} className="project-name">
+              <h2>WeahterApp</h2>
+              <div className="c-left-below">
+                <div className="color-rect four"></div>
+                <p>Oplevelseshjemmeside</p>
+              </div>
             </div>
-          </div>
+          </ScrollAnimation>
         </div>
       </div>
       <div id="c-right">{contentToDisplay}</div>

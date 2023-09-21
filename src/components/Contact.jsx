@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import spinner from "../assets/spinner.gif";
+import coffee from "../assets/coffee.png";
 
 export default function Contact() {
   const form = useRef();
@@ -32,20 +33,25 @@ export default function Contact() {
 
   return (
     <div className="section" id="contact-component">
-      <form id="contact-form" ref={form} onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number" required />
-        <label>Navn</label>
-        <input type="text" name="user_name" required />
-        <label>Email</label>
-        <input type="email" name="user_email" required />
-        <label>Besked</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send Besked" id="form-submit" />
-        <img src={spinner} alt="spinner" id="spinner" />
-        <p id="success">
-          Din besked er sendt <i className="fa-solid fa-check"></i>
-        </p>
-      </form>
+      <div id="form-container">
+        <h1>
+          Skriv til mig <img src={coffee} alt="kaffekop" />
+        </h1>
+        <form id="contact-form" ref={form} onSubmit={sendEmail}>
+          <input type="hidden" name="contact_number" required />
+          <label>Navn</label>
+          <input type="text" name="user_name" required />
+          <label>Email</label>
+          <input type="email" name="user_email" required />
+          <label>Besked</label>
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send Besked" id="form-submit" />
+          <img src={spinner} alt="spinner" id="spinner" />
+          <p id="success">
+            Din besked er sendt <i className="fa-solid fa-check"></i>
+          </p>
+        </form>
+      </div>
       <div id="contact-other">
         <h3>Psst... Jeg kan også kontakes her:</h3>
         <div id="contact-item-container">

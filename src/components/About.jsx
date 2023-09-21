@@ -1,4 +1,6 @@
 import AboutText from "./AboutText";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function About() {
   return (
@@ -7,9 +9,13 @@ export default function About() {
         <p>“Jeg er så imødekommenede at jeg siger 'hej' til min kaffemaskine om morgenen”</p>
       </div>
       <div id="a-right">
-        <div>
-          <h1>Grafisk gøgler & kodeguru</h1>
-          <AboutText />
+        <div id="a-right-container">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <h1>Grafisk gøgler & kodeguru</h1>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <AboutText />
+          </ScrollAnimation>
           {/* <p>
             Hej, jeg er Christoffer - en 25-årig Aarhusianer, der er født og opvokset i den lille perle Hasselager. Jeg har en passion for at kombinere det kreative med det tekniske. Mit hjerte banker
             for frontenduvikling og design, og jeg elsker at tage mine vildeste idéer og kode dem til virkelighed. <br />

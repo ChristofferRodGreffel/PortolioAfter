@@ -1,4 +1,5 @@
 import wave from "../assets/wave.svg";
+import wave2 from "../assets/wave.png";
 import portrait from "../assets/portrait.jpg";
 import fpvideo from "../assets/fpvideo.mp4";
 import HandUp from "./HandUp";
@@ -14,7 +15,7 @@ export default function Frontpage() {
         <div id="fp-content">
           <div>
             <h1>Dav</h1>
-            <img src={wave} alt="vinkende hånd" />
+            <img src={wave2} alt="vinkende hånd" />
           </div>
           <p>Mit navn er Christoffer. Jeg brænder for at designe og udvikle moderne løsninger der forener æstetik og funktionalitet. Jeg håber at vi kan skabe noget sammen.</p>
           <div id="logos">

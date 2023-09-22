@@ -1,6 +1,6 @@
 export default function ScrollDown() {
   return (
-    <a href="#content" id="scrollDown">
+    <a href="#projects" id="scrollDown">
       <p>Scroll videre</p>
       <i className="fa-solid fa-angles-down"></i>
     </a>

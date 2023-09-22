@@ -34,7 +34,7 @@ export default function Sps() {
             <a href="https://chrisrg.dk/sps/" target="_blank">
               Live Site
             </a>
-            <a href="#" target="_blank">
+            <a href="https://github.com/ChristofferRodGreffel/SPS.git" target="_blank">
               <i className="fa-brands fa-github"></i>
             </a>
           </div>

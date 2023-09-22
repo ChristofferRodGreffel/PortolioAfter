@@ -2,6 +2,7 @@ import wave2 from "../assets/wave.png";
 import portrait from "../assets/portrait.jpg";
 import fpvideo from "../assets/fpvideo.mp4";
 import HandUp from "./HandUp";
+import ScrollDown from "./ScrollDown";
 
 export default function Frontpage() {
   return (
@@ -26,10 +27,7 @@ export default function Frontpage() {
         </div>
         <img src={portrait} id="portrait" alt="billede af Christoffer" />
       </div>
-      <div id="scrollDown">
-        <p>Scroll videre</p>
-        <i className="fa-solid fa-angles-down"></i>
-      </div>
+      <ScrollDown />
     </>
   );
 }

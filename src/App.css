@@ -233,6 +233,8 @@ video {
 #scrollDown {
   width: max-content;
   position: absolute;
+  text-decoration: none;
+  color: white;
   bottom: 0;
   right: 50%;
   left: 50%;

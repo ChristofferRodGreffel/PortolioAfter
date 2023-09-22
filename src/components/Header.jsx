@@ -5,9 +5,9 @@ export default function Header() {
     <header>
       <img src={logo} alt="logo" />
       <nav>
-        <a href="#content">Projekter</a>
+        <a href="#projects">Projekter</a>
         <a href="#about">Om mig</a>
-        <a href="#contact-component" id="contact">
+        <a href="#contact" id="contactBtn">
           Kontakt
         </a>
       </nav>

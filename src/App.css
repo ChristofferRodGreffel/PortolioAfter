@@ -86,13 +86,13 @@ nav a {
   font-weight: 300;
   text-decoration: none;
 }
-#contact {
+#contactBtn {
   background-color: var(--logo-blue);
   padding: 8px 25px;
   border-radius: 30px;
   transition: 0.1s ease-in-out;
 }
-#contact:hover {
+#contactBtn:hover {
   background-color: var(--dark-blue);
 }
 
@@ -252,7 +252,7 @@ video {
   display: none;
 }
 
-#content {
+#projects {
   display: flex;
 }
 
@@ -616,14 +616,14 @@ video {
 
 /* CONTACT STYLING */
 
-#contact-component {
+#contact {
   position: relative;
   display: flex;
   justify-content: center;
   gap: 200px;
   align-items: center;
 }
-#contact-component::before {
+#contact::before {
   content: "";
   background-image: url("assets/bgcode.png");
   background-size: cover;
@@ -797,7 +797,7 @@ video {
     font-weight: 300;
     text-decoration: none;
   }
-  #contact {
+  #contactBtn {
     background-color: var(--logo-blue);
     padding: 8px 20px;
     border-radius: 30px;
@@ -926,7 +926,7 @@ video {
 
   /* CONTACT PAGE */
 
-  #contact-component {
+  #contact {
     align-items: center;
     gap: 80px;
   }
@@ -1064,7 +1064,7 @@ video {
 
   /* PROJECTS PAGE */
 
-  #content {
+  #projects {
     overflow: hidden;
     position: relative;
     height: auto;
@@ -1199,12 +1199,12 @@ video {
 
   /* CONTACT PAGE */
 
-  #contact-component {
+  #contact {
     flex-direction: column;
     height: auto;
   }
 
-  #contact-component::before {
+  #contact::before {
     background: none;
   }
 

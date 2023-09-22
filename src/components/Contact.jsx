@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="section" id="contact-component">
+    <div className="section" id="contact">
       <div id="form-container">
         <h1>
           Skal vi tage en kop? <img src={coffee} alt="kaffekop" />

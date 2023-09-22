@@ -95,7 +95,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="section" id="content">
+    <div className="section" id="projects">
       <div id="c-left">
         <div id="c-left-container">
           {projects.map((project, key) => {
